@@ -72,3 +72,6 @@ crashlytics-build.properties
 # Exceptions
 !*.dll
 !*.obj
+
+# PascalABC
+*.pcu
