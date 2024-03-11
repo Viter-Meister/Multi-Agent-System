@@ -7,7 +7,7 @@ class RobotControllerNode : public rclcpp::Node
 public:
     RobotControllerNode() : Node("robot_controller_node")
     {
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("demo/cmd_vel", 10);
         subscription_ = this->create_subscription<std_msgs::msg::String>("pascal_command", 10, std::bind(&RobotControllerNode::command_callback, this, std::placeholders::_1));
     }
 

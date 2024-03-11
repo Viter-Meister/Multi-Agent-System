@@ -1,8 +1,9 @@
 import os
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess
 from launch.conditions import IfCondition, UnlessCondition
-from launch.substitutions import Command, LaunchConfiguration
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import Command, LaunchConfiguration, PythonExpression
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
@@ -11,12 +12,11 @@ def generate_launch_description():
   # Set the path to different files and folders.
   pkg_share = FindPackageShare(package='basic_mobile_robot').find('basic_mobile_robot')
   default_launch_dir = os.path.join(pkg_share, 'launch')
-  default_model_path = os.path.join(pkg_share, 'models/basic_mobile_bot_v1.urdf')
+  default_model_path = os.path.join(pkg_share, 'models/basic_mobile_bot.urdf')
   robot_name_in_urdf = 'basic_mobile_bot'
   default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
   
   # Launch configuration variables specific to simulation
-  gui = LaunchConfiguration('gui')
   model = LaunchConfiguration('model')
   rviz_config_file = LaunchConfiguration('rviz_config_file')
   use_robot_state_pub = LaunchConfiguration('use_robot_state_pub')
@@ -33,11 +33,6 @@ def generate_launch_description():
     name='rviz_config_file',
     default_value=default_rviz_config_path,
     description='Full path to the RVIZ config file to use')
-    
-  declare_use_joint_state_publisher_cmd = DeclareLaunchArgument(
-    name='gui',
-    default_value='True',
-    description='Flag to enable joint_state_publisher_gui')
   
   declare_use_robot_state_pub_cmd = DeclareLaunchArgument(
     name='use_robot_state_pub',
@@ -58,17 +53,9 @@ def generate_launch_description():
 
   # Publish the joint state values for the non-fixed joints in the URDF file.
   start_joint_state_publisher_cmd = Node(
-    condition=UnlessCondition(gui),
     package='joint_state_publisher',
     executable='joint_state_publisher',
     name='joint_state_publisher')
-
-  # A GUI to manipulate the joint state values
-  start_joint_state_publisher_gui_node = Node(
-    condition=IfCondition(gui),
-    package='joint_state_publisher_gui',
-    executable='joint_state_publisher_gui',
-    name='joint_state_publisher_gui')
 
   # Subscribe to the joint states of the robot, and publish the 3D pose of each link.
   start_robot_state_publisher_cmd = Node(
@@ -87,22 +74,42 @@ def generate_launch_description():
     name='rviz2',
     output='screen',
     arguments=['-d', rviz_config_file])
-  
+    
+  spawn_entity = Node(
+    package='gazebo_ros',
+    executable='spawn_entity.py',
+    arguments=['-entity', 'sam_bot', '-topic', 'robot_description'],
+    output='screen')
+    
+  start_gazebo = ExecuteProcess(
+    cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so'], 
+    output='screen')
+    
+  start_robot_localization_cmd = Node(
+    package='robot_localization',
+    executable='ekf_node',
+    name='ekf_filter_node',
+    output='screen',
+    parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time':    
+    LaunchConfiguration('use_sim_time')}])
+		
   # Create the launch description and populate
   ld = LaunchDescription()
 
   # Declare the launch options
   ld.add_action(declare_model_path_cmd)
   ld.add_action(declare_rviz_config_file_cmd)
-  ld.add_action(declare_use_joint_state_publisher_cmd)
   ld.add_action(declare_use_robot_state_pub_cmd)  
   ld.add_action(declare_use_rviz_cmd) 
   ld.add_action(declare_use_sim_time_cmd)
+  
+  ld.add_action(start_gazebo)
 
   # Add any actions
   ld.add_action(start_joint_state_publisher_cmd)
-  ld.add_action(start_joint_state_publisher_gui_node)
   ld.add_action(start_robot_state_publisher_cmd)
+  ld.add_action(spawn_entity)
+  ld.add_action(start_robot_localization_cmd)
   ld.add_action(start_rviz_cmd)
 
   return ld
