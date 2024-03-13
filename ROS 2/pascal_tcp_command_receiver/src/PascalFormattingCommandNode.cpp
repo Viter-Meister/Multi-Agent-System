@@ -48,18 +48,9 @@ class PascalFormattingCommandNode : public rclcpp::Node
         		auto value = split(values[i], ":");
         		
         		if (value[0] == "ROBOT")
-        		{
         			continue;
-        		}
-        		else if (value[0] == "VALUE")
-        		{
-        			continue;
-        		}
         		else if (value[0] == "OPERATION")
-        		{
         			message.data = value[1].c_str();
-        			continue;
-        		}
         	}
         	
         	RCLCPP_INFO(this->get_logger(), "I publish: '%s'\n", message.data.c_str());
