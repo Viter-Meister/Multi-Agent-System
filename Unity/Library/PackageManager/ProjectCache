@@ -1,20 +1,20 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Projects/MultiAgentSystem/UnityPart/Packages/manifest.json
+    m_FilePath: C:/Projects/MultiAgentSystem/Unity/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638423749724902349
-    m_Hash: 3668317445
+      ticks: 638459253360755442
+    m_Hash: 2074267632
   m_LockFileStatus:
-    m_FilePath: C:/Projects/MultiAgentSystem/UnityPart/Packages/packages-lock.json
+    m_FilePath: C:/Projects/MultiAgentSystem/Unity/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638423749724976218
-    m_Hash: 786705128
+      ticks: 638459253360868218
+    m_Hash: 906160720
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.17.6
       source: 1
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.collab-proxy@1.17.6
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.collab-proxy@1.17.6
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
@@ -113,6 +113,7 @@ m_PackageAssets:
         - 2.1.0-preview.6
         - 2.1.0
         - 2.2.0
+        - 2.3.1
         compatible:
         - 1.17.6
         - 1.17.7
@@ -180,7 +181,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.16
       source: 1
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.ide.rider@3.0.16
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.ide.rider@3.0.16
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -238,6 +239,7 @@ m_PackageAssets:
         - 3.0.25
         - 3.0.26
         - 3.0.27
+        - 3.0.28
         compatible:
         - 1.0.2
         - 1.0.6
@@ -280,7 +282,8 @@ m_PackageAssets:
         - 3.0.25
         - 3.0.26
         - 3.0.27
-        verified: 3.0.27
+        - 3.0.28
+        verified: 3.0.28
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -314,7 +317,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.16
       source: 1
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.ide.visualstudio@2.0.16
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.ide.visualstudio@2.0.16
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -420,7 +423,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.5
       source: 1
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.ide.vscode@1.2.5
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.ide.vscode@1.2.5
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -494,7 +497,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 0.7.0-preview
       source: 5
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.robotics.ros-tcp-connector@c27f00c6cf
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.robotics.ros-tcp-connector@c27f00c6cf
       assetPath: Packages/com.unity.robotics.ros-tcp-connector
       name: com.unity.robotics.ros-tcp-connector
       displayName: ROS TCP Connector
@@ -536,12 +539,109 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
+    - packageId: com.unity.robotics.urdf-importer@https://github.com/Unity-Technologies/URDF-Importer.git?path=/com.unity.robotics.urdf-importer#v0.5.2
+      testable: 0
+      isDirectDependency: 1
+      version: 0.5.2-preview
+      source: 5
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.robotics.urdf-importer@90f353e435
+      assetPath: Packages/com.unity.robotics.urdf-importer
+      name: com.unity.robotics.urdf-importer
+      displayName: URDF Importer
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Facilitates importing configurations from the Universal Robot
+        Description Format
+      status: 0
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.unity.editorcoroutines
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.editorcoroutines
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+        configSource: 0
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
+    - packageId: com.unity.robotics.visualizations@https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.visualizations
+      testable: 0
+      isDirectDependency: 1
+      version: 0.7.0-preview
+      source: 5
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.robotics.visualizations@c27f00c6cf
+      assetPath: Packages/com.unity.robotics.visualizations
+      name: com.unity.robotics.visualizations
+      displayName: Unity Robotics Visualizations
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Components for displaying specific ROS messages
+      status: 0
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+        configSource: 0
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.test-framework@1.1.33
       testable: 0
       isDirectDependency: 1
       version: 1.1.33
       source: 1
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.test-framework@1.1.33
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.test-framework@1.1.33
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -670,7 +770,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.6
       source: 1
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.textmeshpro@3.0.6
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.textmeshpro@3.0.6
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -786,6 +886,7 @@ m_PackageAssets:
         - 3.0.5
         - 3.0.6
         - 3.0.7
+        - 3.0.8
         - 3.2.0-pre.1
         - 3.2.0-pre.2
         - 3.2.0-pre.3
@@ -793,11 +894,14 @@ m_PackageAssets:
         - 3.2.0-pre.5
         - 3.2.0-pre.6
         - 3.2.0-pre.7
+        - 3.2.0-pre.8
+        - 3.2.0-pre.9
         - 4.0.0-pre.1
         - 4.0.0-pre.2
         compatible:
         - 3.0.6
         - 3.0.7
+        - 3.0.8
         - 3.2.0-pre.1
         - 3.2.0-pre.2
         - 3.2.0-pre.3
@@ -805,7 +909,9 @@ m_PackageAssets:
         - 3.2.0-pre.5
         - 3.2.0-pre.6
         - 3.2.0-pre.7
-        verified: 3.0.7
+        - 3.2.0-pre.8
+        - 3.2.0-pre.9
+        verified: 3.0.8
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -848,7 +954,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.8
       source: 1
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.timeline@1.4.8
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.timeline@1.4.8
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -1041,7 +1147,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.ugui@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.ugui@1.0.0
       assetPath: Packages/com.unity.ugui
       name: com.unity.ugui
       displayName: Unity UI
@@ -1107,7 +1213,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.ai@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.ai@1.0.0
       assetPath: Packages/com.unity.modules.ai
       name: com.unity.modules.ai
       displayName: AI
@@ -1156,7 +1262,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.androidjni@1.0.0
       assetPath: Packages/com.unity.modules.androidjni
       name: com.unity.modules.androidjni
       displayName: Android JNI
@@ -1205,7 +1311,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.animation@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.animation@1.0.0
       assetPath: Packages/com.unity.modules.animation
       name: com.unity.modules.animation
       displayName: Animation
@@ -1254,7 +1360,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
       assetPath: Packages/com.unity.modules.assetbundle
       name: com.unity.modules.assetbundle
       displayName: Asset Bundle
@@ -1303,7 +1409,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.audio@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.audio@1.0.0
       assetPath: Packages/com.unity.modules.audio
       name: com.unity.modules.audio
       displayName: Audio
@@ -1352,7 +1458,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.cloth@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.cloth@1.0.0
       assetPath: Packages/com.unity.modules.cloth
       name: com.unity.modules.cloth
       displayName: Cloth
@@ -1405,7 +1511,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.director@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.director@1.0.0
       assetPath: Packages/com.unity.modules.director
       name: com.unity.modules.director
       displayName: Director
@@ -1462,7 +1568,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
       assetPath: Packages/com.unity.modules.imageconversion
       name: com.unity.modules.imageconversion
       displayName: Image Conversion
@@ -1512,7 +1618,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.imgui@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.imgui@1.0.0
       assetPath: Packages/com.unity.modules.imgui
       name: com.unity.modules.imgui
       displayName: IMGUI
@@ -1561,7 +1667,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
       assetPath: Packages/com.unity.modules.jsonserialize
       name: com.unity.modules.jsonserialize
       displayName: JSONSerialize
@@ -1610,7 +1716,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
       assetPath: Packages/com.unity.modules.particlesystem
       name: com.unity.modules.particlesystem
       displayName: Particle System
@@ -1659,7 +1765,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.physics@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.physics@1.0.0
       assetPath: Packages/com.unity.modules.physics
       name: com.unity.modules.physics
       displayName: Physics
@@ -1708,7 +1814,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.physics2d@1.0.0
       assetPath: Packages/com.unity.modules.physics2d
       name: com.unity.modules.physics2d
       displayName: Physics 2D
@@ -1757,7 +1863,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.screencapture@1.0.0
       assetPath: Packages/com.unity.modules.screencapture
       name: com.unity.modules.screencapture
       displayName: Screen Capture
@@ -1810,7 +1916,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.terrain@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.terrain@1.0.0
       assetPath: Packages/com.unity.modules.terrain
       name: com.unity.modules.terrain
       displayName: Terrain
@@ -1859,7 +1965,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
       assetPath: Packages/com.unity.modules.terrainphysics
       name: com.unity.modules.terrainphysics
       displayName: Terrain Physics
@@ -1916,7 +2022,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.tilemap@1.0.0
       assetPath: Packages/com.unity.modules.tilemap
       name: com.unity.modules.tilemap
       displayName: Tilemap
@@ -1969,7 +2075,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.ui@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.ui@1.0.0
       assetPath: Packages/com.unity.modules.ui
       name: com.unity.modules.ui
       displayName: UI
@@ -2018,7 +2124,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.uielements@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.uielements@1.0.0
       assetPath: Packages/com.unity.modules.uielements
       name: com.unity.modules.uielements
       displayName: UIElements
@@ -2083,7 +2189,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.umbra@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.umbra@1.0.0
       assetPath: Packages/com.unity.modules.umbra
       name: com.unity.modules.umbra
       displayName: Umbra
@@ -2132,7 +2238,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
       assetPath: Packages/com.unity.modules.unityanalytics
       name: com.unity.modules.unityanalytics
       displayName: Unity Analytics
@@ -2189,7 +2295,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequest
       name: com.unity.modules.unitywebrequest
       displayName: Unity Web Request
@@ -2238,7 +2344,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
       name: com.unity.modules.unitywebrequestassetbundle
       displayName: Unity Web Request Asset Bundle
@@ -2295,7 +2401,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequestaudio
       name: com.unity.modules.unitywebrequestaudio
       displayName: Unity Web Request Audio
@@ -2352,7 +2458,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequesttexture
       name: com.unity.modules.unitywebrequesttexture
       displayName: Unity Web Request Texture
@@ -2409,7 +2515,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequestwww
       name: com.unity.modules.unitywebrequestwww
       displayName: Unity Web Request WWW
@@ -2482,7 +2588,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.vehicles@1.0.0
       assetPath: Packages/com.unity.modules.vehicles
       name: com.unity.modules.vehicles
       displayName: Vehicles
@@ -2535,7 +2641,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.video@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.video@1.0.0
       assetPath: Packages/com.unity.modules.video
       name: com.unity.modules.video
       displayName: Video
@@ -2596,7 +2702,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.vr@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.vr@1.0.0
       assetPath: Packages/com.unity.modules.vr
       name: com.unity.modules.vr
       displayName: VR
@@ -2659,7 +2765,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.wind@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.wind@1.0.0
       assetPath: Packages/com.unity.modules.wind
       name: com.unity.modules.wind
       displayName: Wind
@@ -2708,7 +2814,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.xr@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.xr@1.0.0
       assetPath: Packages/com.unity.modules.xr
       name: com.unity.modules.xr
       displayName: XR
@@ -2769,7 +2875,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.subsystems@1.0.0
       assetPath: Packages/com.unity.modules.subsystems
       name: com.unity.modules.subsystems
       displayName: Subsystems
@@ -2822,7 +2928,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
       assetPath: Packages/com.unity.modules.uielementsnative
       name: com.unity.modules.uielementsnative
       displayName: UIElements Native
@@ -2882,7 +2988,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.ext.nunit@1.0.6
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2947,12 +3053,77 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
         revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
         path: 
+    - packageId: com.unity.editorcoroutines@1.0.0
+      testable: 0
+      isDirectDependency: 0
+      version: 1.0.0
+      source: 1
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.editorcoroutines@1.0.0
+      assetPath: Packages/com.unity.editorcoroutines
+      name: com.unity.editorcoroutines
+      displayName: Editor Coroutines
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: asset
+      description: 'The editor coroutines package allows developers to start constructs
+        similar to Unity''s monobehaviour based coroutines within the editor using
+        abitrary objects. '
+      status: 0
+      errors: []
+      versions:
+        all:
+        - 0.0.1-preview.3
+        - 0.0.1-preview.4
+        - 0.0.1-preview.5
+        - 0.0.2-preview.1
+        - 0.1.0-preview.1
+        - 0.1.0-preview.2
+        - 1.0.0
+        compatible:
+        - 0.0.1-preview.3
+        - 0.0.1-preview.4
+        - 0.0.1-preview.5
+        - 0.0.2-preview.1
+        - 0.1.0-preview.1
+        - 0.1.0-preview.2
+        - 1.0.0
+        verified: 1.0.0
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - coroutine
+      - coroutines
+      - editor
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+        configSource: 0
+      hasRegistry: 1
+      hideInEditor: 0
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637232611380000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.editorcoroutines.git
+        revision: f67fc9992bbc7a553b17375de53a8b2db136528e
+        path: 
     - packageId: com.unity.services.core@1.0.1
       testable: 0
       isDirectDependency: 0
       version: 1.0.1
       source: 1
-      resolvedPath: C:\Projects\MultiAgentSystem\UnityPart\Library\PackageCache\com.unity.services.core@1.0.1
+      resolvedPath: C:\Projects\MultiAgentSystem\Unity\Library\PackageCache\com.unity.services.core@1.0.1
       assetPath: Packages/com.unity.services.core
       name: com.unity.services.core
       displayName: Services Core
@@ -2998,6 +3169,7 @@ m_PackageAssets:
         - 1.12.0
         - 1.12.1
         - 1.12.2
+        - 1.12.4
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3026,6 +3198,7 @@ m_PackageAssets:
         - 1.12.0
         - 1.12.1
         - 1.12.2
+        - 1.12.4
         verified: 1.6.0
       dependencies:
       - name: com.unity.modules.unitywebrequest
@@ -3057,5 +3230,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Projects/MultiAgentSystem/UnityPart/Packages
+m_ProjectPath: C:/Projects/MultiAgentSystem/Unity/Packages
 m_EditorVersion: 2020.3.42f1 (7ade1201f527)
