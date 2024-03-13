@@ -12,29 +12,24 @@ type
     
     property Name: string read fName;
     
-    function CreateRobot(): string;
+    function MoveForward(): string;
     begin
-      Result := $'ROBOT:{fName},OPERATION:CREATE;';
+      Result := $'ROBOT:{fName},OPERATION:MOVE_FORWARD;';
     end;
     
-    function MoveForward(distance: integer): string;
+    function MoveBack(): string;
     begin
-      Result := $'ROBOT:{fName},OPERATION:MOVE_FORWARD,VALUE:{distance};';
+      Result := $'ROBOT:{fName},OPERATION:MOVE_BACK;';
     end;
     
-    function MoveBack(distance: integer): string;
+    function TurnLeft(): string;
     begin
-      Result := $'ROBOT:{fName},OPERATION:MOVE_BACK,VALUE:{distance};';
+      Result := $'ROBOT:{fName},OPERATION:TURN_LEFT;';
     end;
     
-    function TurnLeft(angle: integer): string;
+    function TurnRight(): string;
     begin
-      Result := $'ROBOT:{fName},OPERATION:TURN_LEFT,VALUE:{angle};';
-    end;
-    
-    function TurnRight(angle: integer): string;
-    begin
-      Result := $'ROBOT:{fName},OPERATION:TURN_RIGHT,VALUE:{angle};';
+      Result := $'ROBOT:{fName},OPERATION:TURN_RIGHT;';
     end;
   end;
   
