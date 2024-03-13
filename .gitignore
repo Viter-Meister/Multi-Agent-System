@@ -77,3 +77,7 @@ crashlytics-build.properties
 *.pcu
 
 /Unity/Temp
+/Unity/Logs
+/Unity/Library
+/Unity/obj
+/Unity/UserSettings
