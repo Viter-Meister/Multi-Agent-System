@@ -9,21 +9,6 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
-
-add_executable(PascalCommandSubscriberNode src/PascalCommandSubscriberNode.cpp)
-ament_target_dependencies(PascalCommandSubscriberNode rclcpp std_msgs)
-
-add_executable(RobotControllerNode src/RobotControllerNode.cpp)
-ament_target_dependencies(RobotControllerNode rclcpp std_msgs geometry_msgs)
-
-add_executable(PascalFormattingCommandNode src/PascalFormattingCommandNode.cpp)
-ament_target_dependencies(PascalFormattingCommandNode rclcpp std_msgs)
-
-install(TARGETS
-  PascalCommandSubscriberNode
-  RobotControllerNode
-  PascalFormattingCommandNode
-  DESTINATION lib/${PROJECT_NAME})
   
 install(
   DIRECTORY launch config meshes models rviz src
