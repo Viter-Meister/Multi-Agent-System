@@ -7,24 +7,21 @@ namespace RosSharp.Control
 {
     public enum ControlMode { Keyboard, ROS };
 
-    public class AGVController : MonoBehaviour
+    public class BotController : MonoBehaviour
     {
         public GameObject wheel1;
         public GameObject wheel2;
         public ControlMode mode = ControlMode.ROS;
 
-        private ArticulationBody wA1;
-        private ArticulationBody wA2;
+        private ArticulationBody wheelA1;
+        private ArticulationBody wheelA2;
 
-        public float maxLinearSpeed = 2; //  m/s
-        public float maxRotationalSpeed = 1;//
-        public float wheelRadius = 0.033f; //meters
-        public float trackWidth = 0.288f; // meters Distance between tyres
+        public float maxLinearSpeed = 0.15f;
+        public float maxRotationalSpeed = 0.5f;
+        public float wheelRadius = 0.033f;
+        public float trackWidth = 0.288f;
         public float forceLimit = 10;
         public float damping = 10;
-
-        public float ROSTimeout = 0.5f;
-        private float lastCmdReceived = 0f;
 
         ROSConnection ros;
         private RotationDirection direction;
@@ -33,10 +30,10 @@ namespace RosSharp.Control
 
         void Start()
         {
-            wA1 = wheel1.GetComponent<ArticulationBody>();
-            wA2 = wheel2.GetComponent<ArticulationBody>();
-            SetParameters(wA1);
-            SetParameters(wA2);
+            wheelA1 = wheel1.GetComponent<ArticulationBody>();
+            wheelA2 = wheel2.GetComponent<ArticulationBody>();
+            SetParameters(wheelA1);
+            SetParameters(wheelA2);
             ros = ROSConnection.GetOrCreateInstance();
             ros.Subscribe<TwistMsg>("/demo/cmd_vel", ReceiveROSCmd);
         }
@@ -45,7 +42,6 @@ namespace RosSharp.Control
         {
             rosLinear = (float)cmdVel.linear.x;
             rosAngular = (float)cmdVel.angular.z;
-            lastCmdReceived = Time.time;
         }
 
         void FixedUpdate()
@@ -118,15 +114,12 @@ namespace RosSharp.Control
 
         private void ROSUpdate()
         {
-            if (Time.time - lastCmdReceived > ROSTimeout)
-            {
-                rosLinear = 0f;
-                rosAngular = 0f;
-            }
+            if (rosLinear != 0 || rosAngular != 0)
+                Debug.Log(rosLinear + " " + rosAngular);
             RobotInput(rosLinear, -rosAngular);
         }
 
-        private void RobotInput(float speed, float rotSpeed) // m/s and rad/s
+        private void RobotInput(float speed, float rotSpeed)
         {
             if (speed > maxLinearSpeed)
             {
@@ -149,8 +142,8 @@ namespace RosSharp.Control
                 wheel1Rotation *= Mathf.Rad2Deg;
                 wheel2Rotation *= Mathf.Rad2Deg;
             }
-            SetSpeed(wA1, wheel1Rotation);
-            SetSpeed(wA2, wheel2Rotation);
+            SetSpeed(wheelA1, wheel1Rotation);
+            SetSpeed(wheelA2, wheel2Rotation);
         }
     }
 }
