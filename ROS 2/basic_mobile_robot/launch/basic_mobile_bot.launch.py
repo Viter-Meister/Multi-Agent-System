@@ -103,12 +103,12 @@ def generate_launch_description():
   ld.add_action(declare_use_rviz_cmd) 
   ld.add_action(declare_use_sim_time_cmd)
   
-  ld.add_action(start_gazebo)
+  #ld.add_action(start_gazebo)
 
   # Add any actions
   ld.add_action(start_joint_state_publisher_cmd)
   ld.add_action(start_robot_state_publisher_cmd)
-  ld.add_action(spawn_entity)
+  #ld.add_action(spawn_entity)
   ld.add_action(start_robot_localization_cmd)
   ld.add_action(start_rviz_cmd)
 

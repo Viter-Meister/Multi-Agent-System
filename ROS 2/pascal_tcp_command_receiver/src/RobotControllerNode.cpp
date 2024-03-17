@@ -34,7 +34,7 @@ private:
     	RCLCPP_INFO(this->get_logger(), "I heard: MOVE_FORWARD");
     	
         auto twist = geometry_msgs::msg::Twist();
-        twist.linear.x = 0.5;
+        twist.linear.x = 0.15;
         twist.angular.z = 0.0;
         publisher_->publish(twist);
         
@@ -55,7 +55,7 @@ private:
     	RCLCPP_INFO(this->get_logger(), "I heard: MOVE_BACK");
         
         auto twist = geometry_msgs::msg::Twist();
-        twist.linear.x = -0.5;
+        twist.linear.x = -0.15;
         twist.angular.z = 0.0;
         publisher_->publish(twist);
         
