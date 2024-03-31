@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,8 +6,7 @@ public class CoinPick : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 100;
 
-    //public Text Score;
-    //private int score;
+    public TextMeshProUGUI score;
 
     public AudioSource pick;
 
@@ -17,9 +17,9 @@ public class CoinPick : MonoBehaviour
 
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
         pick.Play();
-        //score += 1;
-        //Score.text = score.ToString();
+        int n = int.Parse(score.text);
+        score.text = (++n).ToString();
     }
 }
