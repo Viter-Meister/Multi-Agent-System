@@ -15,15 +15,26 @@ class PascalCommandSubscriberNode : public rclcpp::Node
 {
 	private:
 	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+	rclcpp::TimerBase::SharedPtr timer_;
 
 	public:
 	PascalCommandSubscriberNode(): Node("pascal_command_subscriber_node")
 	{
+		this->declare_parameter("ip", "127.0.0.1");
+		timer_ = this->create_wall_timer(
+      		500ms, std::bind(&PascalCommandSubscriberNode::connection_callback, this));
+	}
+	
+	void connection_callback()
+	{
+		std::string ip = this->get_parameter("ip").as_string();
+		RCLCPP_INFO(this->get_logger(), "IP: %s", ip.c_str());
+		
 		boost::asio::io_service io_service;
 		tcp::socket socket(io_service);
 		try
 		{
-			socket.connect(tcp::endpoint(boost::asio::ip::address::from_string("192.168.31.133"), 8888));
+			socket.connect(tcp::endpoint(boost::asio::ip::address::from_string(ip), 8888));
 			
 			boost::asio::streambuf receive_buffer;
 			boost::system::error_code error;

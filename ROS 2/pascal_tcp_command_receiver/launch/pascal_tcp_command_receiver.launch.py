@@ -12,11 +12,19 @@ def generate_launch_description():
   # Set the path to different files and folders.
   pkg_share = FindPackageShare(package='pascal_tcp_command_receiver').find('pascal_tcp_command_receiver')
   default_launch_dir = os.path.join(pkg_share, 'launch')
+  
+  ip_value = LaunchConfiguration('ip')
+  
+  ip_launch_arg = DeclareLaunchArgument(
+      'ip',
+      default_value='127.0.0.1'
+  )
     
   start_pascal_command_subscriber = Node(
     package='pascal_tcp_command_receiver',
     executable='PascalCommandSubscriberNode',
-    name='pascal_command_subscriber')
+    name='pascal_command_subscriber',
+    parameters=[{"ip": ip_value}])
     
   start_pascal_command_formatting = Node(
     package='pascal_tcp_command_receiver',
