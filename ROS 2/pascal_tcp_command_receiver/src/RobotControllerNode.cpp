@@ -40,7 +40,7 @@ private:
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 10)
+        while (distance_traveled < 2)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
@@ -61,7 +61,7 @@ private:
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 10)
+        while (distance_traveled < 1)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
@@ -76,13 +76,13 @@ private:
     	RCLCPP_INFO(this->get_logger(), "I heard: TURN_LEFT");
         
         auto twist = geometry_msgs::msg::Twist();
-        twist.linear.x = 0.01;
-        twist.angular.z = 0.5;
+        twist.linear.x = 0.0;
+        twist.angular.z = -0.5;
         publisher_->publish(twist);
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 10)
+        while (distance_traveled < 0.2)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
@@ -97,13 +97,13 @@ private:
     	RCLCPP_INFO(this->get_logger(), "I heard: TURN_RIGHT");
         
         auto twist = geometry_msgs::msg::Twist();
-        twist.linear.x = 0.01;
-        twist.angular.z = -0.5;
+        twist.linear.x = 0.0;
+        twist.angular.z = 0.5;
         publisher_->publish(twist);
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 10)
+        while (distance_traveled < 0.2)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
