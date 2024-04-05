@@ -97,11 +97,11 @@ namespace RosSharp.Control
             }
 
             float turnDirction = Input.GetAxis("Horizontal");
-            if (turnDirction > 0)
+            if (turnDirction < 0)
             {
                 inputRotationSpeed = maxRotationalSpeed;
             }
-            else if (turnDirction < 0)
+            else if (turnDirction > 0)
             {
                 inputRotationSpeed = maxRotationalSpeed * -1;
             }
@@ -114,8 +114,6 @@ namespace RosSharp.Control
 
         private void ROSUpdate()
         {
-            if (rosLinear != 0 || rosAngular != 0)
-                Debug.Log(rosLinear + " " + rosAngular);
             RobotInput(rosLinear, -rosAngular);
         }
 

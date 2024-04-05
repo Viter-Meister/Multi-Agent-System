@@ -1,14 +1,14 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CoinPick : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed = 100;
-
-    public TextMeshProUGUI score;
-
-    public AudioSource pick;
+    [SerializeField] 
+    private float rotationSpeed = 100;
+    [SerializeField]
+    private TextMeshProUGUI score;
+    [SerializeField]
+    private AudioSource pick;
 
     private void Update()
     {
