@@ -35,7 +35,7 @@ namespace RosSharp.Control
             SetParameters(wheelA1);
             SetParameters(wheelA2);
             ros = ROSConnection.GetOrCreateInstance();
-            ros.Subscribe<TwistMsg>("/demo/cmd_vel", ReceiveROSCmd);
+            ros.Subscribe<TwistMsg>("/cmd_vel", ReceiveROSCmd);
         }
 
         void ReceiveROSCmd(TwistMsg cmdVel)
