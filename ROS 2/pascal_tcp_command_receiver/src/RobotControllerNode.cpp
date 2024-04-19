@@ -8,7 +8,7 @@ class RobotControllerNode : public rclcpp::Node
 public:
     RobotControllerNode() : Node("robot_controller_node")
     {
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("demo/cmd_vel", 10);
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
         subscription_ = this->create_subscription<std_msgs::msg::String>("pascal_command", 10, std::bind(&RobotControllerNode::command_callback, this, std::placeholders::_1));
     }
 
@@ -34,13 +34,13 @@ private:
     	RCLCPP_INFO(this->get_logger(), "I heard: MOVE_FORWARD");
     	
         auto twist = geometry_msgs::msg::Twist();
-        twist.linear.x = 0.15;
+        twist.linear.x = 0.1;
         twist.angular.z = 0.0;
         publisher_->publish(twist);
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 2)
+        while (distance_traveled < 4)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
@@ -55,13 +55,13 @@ private:
     	RCLCPP_INFO(this->get_logger(), "I heard: MOVE_BACK");
         
         auto twist = geometry_msgs::msg::Twist();
-        twist.linear.x = -0.15;
+        twist.linear.x = -0.1;
         twist.angular.z = 0.0;
         publisher_->publish(twist);
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 1)
+        while (distance_traveled < 2)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
@@ -82,14 +82,24 @@ private:
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 0.2)
+        while (distance_traveled < 0.75)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
         	distance_traveled = 0.5 * elapsed_time.count();
         	RCLCPP_INFO(this->get_logger(), "distance_traveled %f", distance_traveled);
         }
+        
         stopMoving();
+        
+        distance_traveled = 0;
+        start_time_ = std::chrono::high_resolution_clock::now();
+        while (distance_traveled < 0.5)
+        {
+        	auto end_time = std::chrono::high_resolution_clock::now();
+        	std::chrono::duration<double> elapsed_time = end_time - start_time_;
+        	distance_traveled = 0.5 * elapsed_time.count();
+        }
     }
 
     void turn_right()
@@ -103,14 +113,24 @@ private:
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 0.2)
+        while (distance_traveled < 0.75)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
         	distance_traveled = 0.5 * elapsed_time.count();
         	RCLCPP_INFO(this->get_logger(), "distance_traveled %f", distance_traveled);
         }
+        
         stopMoving();
+        
+        distance_traveled = 0;
+        start_time_ = std::chrono::high_resolution_clock::now();
+        while (distance_traveled < 0.5)
+        {
+        	auto end_time = std::chrono::high_resolution_clock::now();
+        	std::chrono::duration<double> elapsed_time = end_time - start_time_;
+        	distance_traveled = 0.5 * elapsed_time.count();
+        }
     }
     
      void stopMoving()

@@ -11,7 +11,7 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
   
 install(
-  DIRECTORY launch config meshes models rviz src
+  DIRECTORY launch config meshes models rviz
   DESTINATION share/${PROJECT_NAME}
 )
 

@@ -12,8 +12,8 @@ def generate_launch_description():
   # Set the path to different files and folders.
   pkg_share = FindPackageShare(package='basic_mobile_robot').find('basic_mobile_robot')
   default_launch_dir = os.path.join(pkg_share, 'launch')
-  default_model_path = os.path.join(pkg_share, 'models/basic_mobile_bot.urdf')
-  robot_name_in_urdf = 'basic_mobile_bot'
+  default_model_path = os.path.join(pkg_share, 'models/basic_mobile_robot.urdf')
+  robot_name_in_urdf = 'basic_mobile_robot'
   default_rviz_config_path = os.path.join(pkg_share, 'rviz/urdf_config.rviz')
   
   # Launch configuration variables specific to simulation
@@ -51,12 +51,6 @@ def generate_launch_description():
    
   # Specify the actions
 
-  # Publish the joint state values for the non-fixed joints in the URDF file.
-  start_joint_state_publisher_cmd = Node(
-    package='joint_state_publisher',
-    executable='joint_state_publisher',
-    name='joint_state_publisher')
-
   # Subscribe to the joint states of the robot, and publish the 3D pose of each link.
   start_robot_state_publisher_cmd = Node(
     condition=IfCondition(use_robot_state_pub),
@@ -75,16 +69,6 @@ def generate_launch_description():
     output='screen',
     arguments=['-d', rviz_config_file])
     
-  spawn_entity = Node(
-    package='gazebo_ros',
-    executable='spawn_entity.py',
-    arguments=['-entity', 'basic_mobile_bot', '-topic', 'robot_description'],
-    output='screen')
-    
-  start_gazebo = ExecuteProcess(
-    cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so'], 
-    output='screen')
-    
   start_robot_localization_cmd = Node(
     package='robot_localization',
     executable='ekf_node',
@@ -102,13 +86,9 @@ def generate_launch_description():
   ld.add_action(declare_use_robot_state_pub_cmd)  
   ld.add_action(declare_use_rviz_cmd) 
   ld.add_action(declare_use_sim_time_cmd)
-  
-  #ld.add_action(start_gazebo)
 
   # Add any actions
-  ld.add_action(start_joint_state_publisher_cmd)
   ld.add_action(start_robot_state_publisher_cmd)
-  #ld.add_action(spawn_entity)
   ld.add_action(start_robot_localization_cmd)
   ld.add_action(start_rviz_cmd)
 
