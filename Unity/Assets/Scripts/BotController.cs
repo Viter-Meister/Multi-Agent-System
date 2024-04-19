@@ -11,10 +11,14 @@ namespace RosSharp.Control
     {
         public GameObject wheel1;
         public GameObject wheel2;
+        public GameObject wheel11;
+        public GameObject wheel22;
         public ControlMode mode = ControlMode.ROS;
 
         private ArticulationBody wheelA1;
         private ArticulationBody wheelA2;
+        private ArticulationBody wheelA11;
+        private ArticulationBody wheelA22;
 
         public float maxLinearSpeed = 0.15f;
         public float maxRotationalSpeed = 0.5f;
@@ -32,8 +36,12 @@ namespace RosSharp.Control
         {
             wheelA1 = wheel1.GetComponent<ArticulationBody>();
             wheelA2 = wheel2.GetComponent<ArticulationBody>();
+            wheelA11 = wheel11.GetComponent<ArticulationBody>();
+            wheelA22 = wheel22.GetComponent<ArticulationBody>();
             SetParameters(wheelA1);
             SetParameters(wheelA2);
+            SetParameters(wheelA11);
+            SetParameters(wheelA22);
             ros = ROSConnection.GetOrCreateInstance();
             ros.Subscribe<TwistMsg>("/cmd_vel", ReceiveROSCmd);
         }
@@ -142,6 +150,8 @@ namespace RosSharp.Control
             }
             SetSpeed(wheelA1, wheel1Rotation);
             SetSpeed(wheelA2, wheel2Rotation);
+            SetSpeed(wheelA11, wheel1Rotation);
+            SetSpeed(wheelA22, wheel2Rotation);
         }
     }
 }

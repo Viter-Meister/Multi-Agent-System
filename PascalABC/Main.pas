@@ -1,11 +1,17 @@
 ﻿uses Robotics, TCPServer;
 
 begin  
-  var server := new ServerObj('192.168.31.132', 8888);
-  
+  var server := new ServerObj('your IP address', 8888);
   var robot := new Robot('robot1');
-  server.Send(robot.MoveForward());
-  server.Send(robot.TurnLeft());
+  
+  // This is just an example
+  //
+  // server.Send(robot.MoveForward());
+  // server.Send(robot.TurnBack());
+  // server.Send(robot.TurnLeft());
+  // server.Send(robot.TurnRigth());
+  
+  // Place your code below
   
   server.Start();
 end.
