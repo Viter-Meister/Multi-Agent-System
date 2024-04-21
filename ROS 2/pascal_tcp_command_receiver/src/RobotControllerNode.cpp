@@ -40,13 +40,13 @@ private:
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 4)
+        while (distance_traveled < 0.25)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
-        	distance_traveled = 0.5 * elapsed_time.count();
+        	distance_traveled = 0.1 * elapsed_time.count();
         	RCLCPP_INFO(this->get_logger(), "distance_traveled %f", distance_traveled);
-        }
+        }        
         stopMoving();
     }
 
@@ -61,13 +61,13 @@ private:
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 2)
+        while (distance_traveled < 0.15)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
-        	distance_traveled = 0.5 * elapsed_time.count();
+        	distance_traveled = 0.1 * elapsed_time.count();
         	RCLCPP_INFO(this->get_logger(), "distance_traveled %f", distance_traveled);
-        }
+        }  
         stopMoving();
     }
 
@@ -77,16 +77,16 @@ private:
         
         auto twist = geometry_msgs::msg::Twist();
         twist.linear.x = 0.0;
-        twist.angular.z = -0.5;
+        twist.angular.z = -0.2;
         publisher_->publish(twist);
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 0.75)
+        while (distance_traveled < 0.15)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
-        	distance_traveled = 0.5 * elapsed_time.count();
+        	distance_traveled = 0.2 * elapsed_time.count();
         	RCLCPP_INFO(this->get_logger(), "distance_traveled %f", distance_traveled);
         }
         
@@ -94,7 +94,7 @@ private:
         
         distance_traveled = 0;
         start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 0.5)
+        while (distance_traveled < 0.3)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
@@ -108,16 +108,16 @@ private:
         
         auto twist = geometry_msgs::msg::Twist();
         twist.linear.x = 0.0;
-        twist.angular.z = 0.5;
+        twist.angular.z = 0.2;
         publisher_->publish(twist);
         
         double distance_traveled = 0;
         auto start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 0.75)
+        while (distance_traveled < 0.15)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
-        	distance_traveled = 0.5 * elapsed_time.count();
+        	distance_traveled = 0.2 * elapsed_time.count();
         	RCLCPP_INFO(this->get_logger(), "distance_traveled %f", distance_traveled);
         }
         
@@ -125,7 +125,7 @@ private:
         
         distance_traveled = 0;
         start_time_ = std::chrono::high_resolution_clock::now();
-        while (distance_traveled < 0.5)
+        while (distance_traveled < 0.3)
         {
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
