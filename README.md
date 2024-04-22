@@ -14,13 +14,14 @@
 <br />
 <div align="center">
   <a href="https://github.com/Spoky-Loki/Multi-Agent-System">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Multi-Agent-System</h3>
 
   <p align="center">
     Репозиторий для дипломного проекта. 
+    <br />
     Тема: "Многоагентная система PascalABC-ROS2-Unity"
     <br />
     <a href="https://github.com/Spoky-Loki/Multi-Agent-System/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
@@ -33,34 +34,33 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Cодержание</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#о-проекте">О Проекте</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#разработан-с-использованием">Разработан с использованием</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#подготовка-к-работе">Подготовка к работе</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#необходимые-компоненты">Необходимые компоненты</a></li>
+        <li><a href="#установка">Установка</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#использование">Использование</a></li>
+    <li><a href="#участвовать-в-разработке-проекта">Участвовать в разработке проекта</a></li>
+    <li><a href="#лицензия">Лицензия</a></li>
+    <li><a href="#контакты">Контакты</a></li>
+    <li><a href="#благодарности">Благодарность</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## О Проекте
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -75,34 +75,27 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 Use the `BLANK_README.md` to get started.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
-### Built With
+### Разработан с использованием
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [![Ros][Ros.js]][Ros-url]
+* [![Unity][Unity.js]][Unity-url]
+* [![Pascal][Pascal.js]][Pascal-url]
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Подготовка к работе
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Необходимые компоненты
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
@@ -110,7 +103,7 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 
-### Installation
+### Установка
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
@@ -128,91 +121,65 @@ _Below is an example of how you can instruct your audience on installing and set
    const API_KEY = 'ENTER YOUR API';
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Использование
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Участвовать в разработке проекта
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Если у вас есть предложения, которые могли бы улучшить проект, пожалуйста сделайте Форк репозитория и создайте Pull Request. Вы также можете просто открыть Issues с тегом "enhancement".
+Не забудьте отметить проект звездочкой! Еще раз спасибо!
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+1. Сделайте Форк проекта
+2. Создайте ветку со своей Фичей (`git checkout -b feature/AmazingFeature`)
+3. Зафиксируйте свои изменения (`git commit -m 'Add some AmazingFeature'`)
+4. Залейте изменения на ветку (`git push origin feature/AmazingFeature`)
+5. Откройте Pull Request
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
 <!-- LICENSE -->
-## License
+## Лицензия
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Распространяется по лицензии MIT. Дополнительную информацию смотрите в `LICENSE.md`.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
 <!-- CONTACT -->
-## Contact
+## Контакты
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Витер Виктор - [@Spoky_Loki](https://t.me/Spoky_Loki) - viter02@inbox.ru
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Ссылка на проект: [https://github.com/Spoky-Loki/Multi-Agent-System.git](https://github.com/Spoky-Loki/Multi-Agent-System)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Благодарности
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+* [Unity Robotics Hub](https://github.com/Unity-Technologies/Unity-Robotics-Hub)
+* [The Ultimate Guide to the ROS 2 Navigation Stack](https://automaticaddison.com/the-ultimate-guide-to-the-ros-2-navigation-stack/)
+* [ROS 2 Documentation](https://docs.ros.org/en/humble/index.html)
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
@@ -229,12 +196,12 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-shield]: https://img.shields.io/github/license/Spoky-Loki/Multi-Agent-System.svg?style=for-the-badge
 [license-url]: https://github.com/Spoky-Loki/Multi-Agent-System/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
+[Unity.js]: https://img.shields.io/badge/unity-3d?style=for-the-badge&logo=Unity&logoColor=white&color=black
+[Unity-url]: https://unity.com/
+[Pascal.js]: https://img.shields.io/badge/PascalABC.NET-BLUE?style=for-the-badge&logo=PascalABC.NET&logoColor=blue&labelColor=green&color=green
+[Pascal-url]: https://pascalabc.net/
+[Ros.js]: https://img.shields.io/badge/ROS-2?style=for-the-badge&logo=ROS&logoColor=white&color=blue
+[Ros-url]: https://www.ros.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
