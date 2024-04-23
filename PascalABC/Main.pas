@@ -7,7 +7,7 @@ begin
   // This is just an example
   //
   // server.Send(robot.MoveForward());
-  // server.Send(robot.TurnBack());
+  // server.Send(robot.MoveBack());
   // server.Send(robot.TurnLeft());
   // server.Send(robot.TurnRigth());
   

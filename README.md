@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Spoky-Loki/Multi-Agent-System">
-    <img src="images/logo.png" alt="Logo" width="100" height="100">
+    <img src="https://github.com/Spoky-Loki/Multi-Agent-System/blob/main/Images/logo.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Multi-Agent-System</h3>
@@ -24,9 +24,9 @@
     <br />
     Тема: "Многоагентная система PascalABC-ROS2-Unity"
     <br />
-    <a href="https://github.com/Spoky-Loki/Multi-Agent-System/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/Spoky-Loki/Multi-Agent-System/issues/new?labels=bug&template=bug-report---.md">Сообщить об ошибке</a>
     ·
-    <a href="https://github.com/Spoky-Loki/Multi-Agent-System/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/Spoky-Loki/Multi-Agent-System/issues/new?labels=enhancement&template=feature-request---.md">Предложить фичу</a>
   </p>
 </div>
 
@@ -53,27 +53,36 @@
     <li><a href="#участвовать-в-разработке-проекта">Участвовать в разработке проекта</a></li>
     <li><a href="#лицензия">Лицензия</a></li>
     <li><a href="#контакты">Контакты</a></li>
-    <li><a href="#благодарности">Благодарность</a></li>
+    <li><a href="#благодарности">Благодарности</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## О Проекте
+# О Проекте
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/Spoky-Loki/Multi-Agent-System)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Проект "Многоагентная система PascalABC, ROS2, Unity" представляет собой интеграцию трёх технологий для создания интеллектуальных агентских систем.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+* `PascalABC` - это язык программирования, который используется в данном проекте для отправки команд роботу.
+* `ROS2` - это система для создания роботов, в данном проекте она позволяет роботу получать и выполнять команды от PascalABC.
+* `Unity` - это движок для создания видеоигр, в данном проекте используется как средство визуализации робота и его окружения.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+В рамках проекта разработаны следующие модули:
+* `PascalABC-Robot-Command` - модуль, который позволяет создавать программы для управления роботом.
+* `PascalABC-Robot-Speech-Command` - модуль, который позволяет управлять роботом с помощью голосовых команд.
+* `PascalABC-ROS2-Bridge` - модуль, который обеспечивает связь между PascalABC и ROS2.
+* `ROS2-Simple-Mobile-Robot` - модуль, который содержит описание робота.
+* `Unity-Robotics-Scene` - модуль, который содержит визуальную модель робота и его окружения.
 
-Use the `BLANK_README.md` to get started.
+Для связи между ROS2 и Unity используется решение предоставляемое Unity Technologies модуль `Unity-Robotics-Hub`, который включает в себя:
+* `ROS TCP Endpoint` - Узел ROS для отправки/получения сообщений от Unity.
+* `ROS TCP Connector` - Пакет Unity для отправки, получения и визуализации сообщений от ROS.
+* `URDF Importer` - Пакет Unity для загрузки URDF-файлов.
+
+Проект предоставляет возможность создавать интеллектуальные агентские системы, которые могут быть использованы в различных областях, таких как наука, техника, искусство и развлечения.
 
 <p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
@@ -90,54 +99,199 @@ Use the `BLANK_README.md` to get started.
 
 
 <!-- GETTING STARTED -->
-## Подготовка к работе
+# Подготовка к работе
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Для того чтобы запустить локальную копию проекта "Многоагентная система PascalABC, ROS2, Unity 3D" необходимо выполнить следующие простые действия.
 
-### Необходимые компоненты
+## Необходимые компоненты
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
+Для работы системы необходимо установить и настроить следующие компоненты:
+* PascalABC.NET
   ```
+  Скачать и установить последнюю версию системы программирования PascalABC.NET
 
-### Установка
+  Ссылки для скачивания: https://pascalabc.net/ssyilki-dlya-skachivaniya
+  ```
+* ROS2
+  ```
+  Скачать и установить ROS2 Humble (рекомендация устанавливать версию для Ubuntu)
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+  Ссылки на инструкцию по скачиванию и установки: https://docs.ros.org/en/humble/Installation.html
+  ```
+* Oracle VM VirtualBox (опционально)
+  ```
+  Если решили устанавливать ROS2 на Ubuntu, а данная ОС у вас не установленна, то можно воспользоваться виртуальной машиной.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+  Скачать и установить последнюю версию Oracle VM VirtualBox
+  Ссылки для скачивания: https://www.virtualbox.org/wiki/Downloads
+
+  Ссылка по настройке Ubuntu под Oracle VM VirtualBox: https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview
+  ```
+* Unity (опционально)
+  ```
+  Если собираетесь модифицировать тестовую сцену и модель робота, то необходимо установить игровой движок Unity.
+  Ссылка для скачивания: https://unity.com/ru/download
+  ```
+## Установка
+
+Порядок установки и настройки системы:
+
+1. Клонировать репозиторий
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Spoky-Loki/Multi-Agent-System.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
+2. Перенесите модули из папки `ROS 2` копии этого репозитория в свою рабочую директорию `ROS2`.
+  <br/>
+  Выполните сборку командой:
+    ```sh
+    colcon build
+    ```
+    Настроить среду командой:
+      ```sh
+      . install/setup.bash
+      ```
+3. Запустите `ROS-TCP-Endpoint` для этого выполните команду:
+    ```sh
+    . install/setup.bash
+    ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=<your IP>
+    ```
+    Следует указывать IP адрес вашей системы Ubuntu, его можно узнать следующей командой:
+    ```sh
+    hostname -I
+    ```
+    Если вы используете виртуальную машину, то, для того чтобы иметь возможность обмениваться данными между основной ОС и виртуальной, необходимо подключить виртуальную машину к локальной сети. 
+    <br/>
+    Для этого лучше всего настроить сеть виртуальной машины на использования сетевого моста.
+4. В новом окне терминала запустите `PascalABC-ROS2-Bridge` для этого выполните команду:
+    ```sh
+    . install/setup.bash
+    ros2 launch pascal_tcp_command_receiver pascal_tcp_command_receiver.launch.py ip:=<your IP>
+    ```
+    Следует указывать IP адрес вашей основной ОС, его можно узнать следующей командой:
+    ```sh
+    ipconfig
+    ```
+    Строка содержащая IPv4-адрес.
+5. В новом окне терминала запустите  `RVIZ` с моделью робота (опционально)
+    ```sh
+    ros2 launch basic_mobile_robot basic_mobile_bot.launch.py
+    ```
+6. Скачать и запустить сборку проекта Unity.
+    <br/>
+    В настройках укажите IP адрес, который использовался для запуска `ROS-TCP-Endpoint`.
+    <br/>
+    Начните симуляцию.
+7. Использование `PascalABC`
+    <br/>
+    Если вы хотите управлять роботом с помощью голосовых команд, то откройте и запустите программу `Speech.pas` из директории `PascalABC`.
+    <br/>
+    Если вы собираетесь создавать программы для управления роботом, то откройте файл `Main.pas` и после комментария пишите свой код, после чего запустите программу.
 <p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
-## Использование
+# Использование
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Пример из проекта
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Пример робота из этого проекта может распознавать 4 команды: `Вперед`, `Назад`, `Влево`, `Вправо`.
+<br/>
+Для голосового управления можно использовать команды: `Вперед`, `Назад`, `Влево`, `Вправо`, `Конец`.
+<br/>
+При создании программ можно использовать команды: `robot.MoveForward()`, `robot.MoveBack()`, `robot.TurnLeft()`, `robot.TurnRigth()`.
+<br/>
+<br/>
+В демонстрационной сцене роботу нужно проехать по заданному маршруту и собрать все монетки по пути.
+
+## Модифицировать сцену и робота в Unity
+
+Открыть проект Unity из копии этого репозитория в редакторе Unity.
+<br/>
+<br/>
+Для изменения окружения используйте стандартные средства Unity.
+<br/>
+<br/>
+Для изменения модели робота необходимо создать его описание в формате URDF и поместить его в папку `Assets/URDF`, также добавьте URDF файл в модуль `basic_mobile_robot` расположенный в вашей рабочей директории ROS2 в директорию `models`.
+<br/>
+Меши и Материалы для робота поместить соответственно в папки `Assets/URDF/meshes` и `Assets/URDF/Materials`, тажке добавьте меши в модуль `basic_mobile_robot` расположенный в вашей рабочей директории ROS2 в директорию `meshes`.
+<br/>
+Далее импортировать модель в сцену можно следующим образом:
+1. Щелкните правой кнопкой мыши на файле URDF и выберите команду `Import Robot from Selected URDF file`
+2. Появится окно с настройками импорта для робота.
+3. Нажмите `Import URDF`
+
+## Модифицировать или добавить команды
+
+### Модификация команд в PascalABC
+
+Для добавления или изменения команд откройте файл `Robotics.pas` из директории `PascalABC`.
+
+Для изменения команд модифицируйте функции соответствующие команде, например для команды `вперед`:
+```Pascal
+function MoveForward(): string;
+  begin
+    Result := $'ROBOT:{fName},OPERATION:MOVE_FORWARD;';
+  end;
+```
+
+Для добавления команд используйте следующий пример:
+```Pascal
+function Command(): string;
+  begin
+    Result := $'ROBOT:{fName},OPERATION:COMMAND;';
+  end;
+```
+
+### Модификация голосовых команд PascalABC
+
+Для добавления или изменения голосовых команд откройте файл `Speech.pas` из директории `PascalABC`.
+
+Изменить команды можно следующим образом:
+
+1. Найти строку `var choices := new Choices();`.
+2. Изменить команды в строках ниже `choices.Add('команда');`.
+3. Изменить соответствующие команды в функции `speechEngine_SpeechRecognized`.
+
+Для добавления команд:
+
+1. Найти строку `var choices := new Choices();`
+2. Добавить команду после всех существующих с помощью `choices.Add('команда');`.
+3. Также добавить команды в функцию `speechEngine_SpeechRecognized` по примеру:
+    ```Pascal
+    if (e.Result.Text = 'команда') then
+    begin
+      server.Send(robot.Command());
+      server.Start();
+    end;
+    ```
+(Не забудьте добавить команды в `Robotics.pas`)
+
+### Модификация команд в ROS2
+
+1. Перейдите в модуль `pascal_tcp_command_receiver` расположенный в вашей рабочей директории ROS2.
+2. Перейдите в директорию `src`.
+3. Откройте файл `RobotControllerNode.cpp`.
+4. Добавьте или измените команду в функции `command_callback`.
+5. Добавьте или измените функцию обработки команды по следующему примеру:
+    ```CPP
+    void Command()
+    {
+      RCLCPP_INFO(this->get_logger(), "I heard: COMMAND");
+
+      // Обработка команды
+
+      stopMoving();
+    }
+    ```
+6. Сделайте сборку и запустить модули.
 
 <p align="right">(<a href="#readme-top">вернуться к началу</a>)</p>
 
 
 
 <!-- CONTRIBUTING -->
-## Участвовать в разработке проекта
+# Участвовать в разработке проекта
 
 Если у вас есть предложения, которые могли бы улучшить проект, пожалуйста сделайте Форк репозитория и создайте Pull Request. Вы также можете просто открыть Issues с тегом "enhancement".
 Не забудьте отметить проект звездочкой! Еще раз спасибо!
@@ -153,7 +307,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- LICENSE -->
-## Лицензия
+# Лицензия
 
 Распространяется по лицензии MIT. Дополнительную информацию смотрите в `LICENSE.md`.
 
@@ -162,7 +316,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- CONTACT -->
-## Контакты
+# Контакты
 
 Витер Виктор - [@Spoky_Loki](https://t.me/Spoky_Loki) - viter02@inbox.ru
 
@@ -173,7 +327,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Благодарности
+# Благодарности
 
 * [Unity Robotics Hub](https://github.com/Unity-Technologies/Unity-Robotics-Hub)
 * [The Ultimate Guide to the ROS 2 Navigation Stack](https://automaticaddison.com/the-ultimate-guide-to-the-ros-2-navigation-stack/)
@@ -194,21 +348,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 [issues-shield]: https://img.shields.io/github/issues/Spoky-Loki/Multi-Agent-System.svg?style=for-the-badge
 [issues-url]: https://github.com/Spoky-Loki/Multi-Agent-System/issues
 [license-shield]: https://img.shields.io/github/license/Spoky-Loki/Multi-Agent-System.svg?style=for-the-badge
-[license-url]: https://github.com/Spoky-Loki/Multi-Agent-System/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
+[license-url]: https://github.com/Spoky-Loki/Multi-Agent-System/blob/master/LICENSE.md
+[product-screenshot]: https://github.com/Spoky-Loki/Multi-Agent-System/blob/main/images/collage.png
 [Unity.js]: https://img.shields.io/badge/unity-3d?style=for-the-badge&logo=Unity&logoColor=white&color=black
 [Unity-url]: https://unity.com/
 [Pascal.js]: https://img.shields.io/badge/PascalABC.NET-BLUE?style=for-the-badge&logo=PascalABC.NET&logoColor=blue&labelColor=green&color=green
 [Pascal-url]: https://pascalabc.net/
 [Ros.js]: https://img.shields.io/badge/ROS-2?style=for-the-badge&logo=ROS&logoColor=white&color=blue
 [Ros-url]: https://www.ros.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
