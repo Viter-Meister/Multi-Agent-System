@@ -141,7 +141,7 @@
    git clone https://github.com/Spoky-Loki/Multi-Agent-System.git
    ```
 2. Перенесите модули из папки `ROS 2` копии этого репозитория в свою рабочую директорию `ROS2`.
-  <br/>
+    <br/>
   Выполните сборку командой:
     ```sh
     colcon build
