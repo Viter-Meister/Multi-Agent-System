@@ -106,31 +106,35 @@
 ## Необходимые компоненты
 
 Для работы системы необходимо установить и настроить следующие компоненты:
-* PascalABC.NET
+* PascalABC.NET<br/>
+  Скачать и установить последнюю версию системы программирования PascalABC.NET<br/>
+  Ссылки для скачивания:
   ```
-  Скачать и установить последнюю версию системы программирования PascalABC.NET
+  https://pascalabc.net/ssyilki-dlya-skachivaniya
+  ```
+* ROS2<br/>
+  Скачать и установить ROS2 Humble (рекомендация устанавливать версию для Ubuntu)<br/>
+  Ссылки на инструкцию по скачиванию и установки:
+  ```
+  https://docs.ros.org/en/humble/Installation.html
+  ```
+* Oracle VM VirtualBox (опционально)<br/>
+  Если решили устанавливать ROS2 на Ubuntu, а данная ОС у вас не установленна, то можно воспользоваться виртуальной машиной.<br/>
 
-  Ссылки для скачивания: https://pascalabc.net/ssyilki-dlya-skachivaniya
+  Скачать и установить последнюю версию Oracle VM VirtualBox<br/>
+  Ссылки для скачивания:
   ```
-* ROS2
+  https://www.virtualbox.org/wiki/Downloads
   ```
-  Скачать и установить ROS2 Humble (рекомендация устанавливать версию для Ubuntu)
-
-  Ссылки на инструкцию по скачиванию и установки: https://docs.ros.org/en/humble/Installation.html
+  Ссылка по настройке Ubuntu под Oracle VM VirtualBox:
+  ``` 
+  https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview
   ```
-* Oracle VM VirtualBox (опционально)
+* Unity (опционально)<br/>
+  Если собираетесь модифицировать тестовую сцену и модель робота, то необходимо установить игровой движок Unity.<br/>
+  Ссылка для скачивания: 
   ```
-  Если решили устанавливать ROS2 на Ubuntu, а данная ОС у вас не установленна, то можно воспользоваться виртуальной машиной.
-
-  Скачать и установить последнюю версию Oracle VM VirtualBox
-  Ссылки для скачивания: https://www.virtualbox.org/wiki/Downloads
-
-  Ссылка по настройке Ubuntu под Oracle VM VirtualBox: https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview
-  ```
-* Unity (опционально)
-  ```
-  Если собираетесь модифицировать тестовую сцену и модель робота, то необходимо установить игровой движок Unity.
-  Ссылка для скачивания: https://unity.com/ru/download
+  https://unity.com/ru/download
   ```
 ## Установка
 
@@ -176,12 +180,15 @@
     ```sh
     ros2 launch basic_mobile_robot basic_mobile_bot.launch.py
     ```
-6. Скачать и запустить сборку проекта Unity.
-    <br/>
+6. Скачать и запустить сборку проекта Unity.<br/>
+  Ссылка для скачивания:
+   ```sh
+   https://drive.google.com/drive/folders/1lfjJB3N6URnstkKEJItrHwtGCVU9jPYC?usp=sharing
+    ```
     В настройках укажите IP адрес, который использовался для запуска `ROS-TCP-Endpoint`.
     <br/>
     Начните симуляцию.
-7. Использование `PascalABC`
+8. Использование `PascalABC`
     <br/>
     Если вы хотите управлять роботом с помощью голосовых команд, то откройте и запустите программу `Speech.pas` из директории `PascalABC`.
     <br/>
