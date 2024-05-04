@@ -349,7 +349,7 @@ function Command(): string;
 [issues-url]: https://github.com/Spoky-Loki/Multi-Agent-System/issues
 [license-shield]: https://img.shields.io/github/license/Spoky-Loki/Multi-Agent-System.svg?style=for-the-badge
 [license-url]: https://github.com/Spoky-Loki/Multi-Agent-System/blob/master/LICENSE.md
-[product-screenshot]: https://github.com/Spoky-Loki/Multi-Agent-System/blob/main/images/collage.png
+[product-screenshot]: https://github.com/Spoky-Loki/Multi-Agent-System/blob/main/Images/collages.png
 [Unity.js]: https://img.shields.io/badge/unity-3d?style=for-the-badge&logo=Unity&logoColor=white&color=black
 [Unity-url]: https://unity.com/
 [Pascal.js]: https://img.shields.io/badge/PascalABC.NET-BLUE?style=for-the-badge&logo=PascalABC.NET&logoColor=blue&labelColor=green&color=green
