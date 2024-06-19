@@ -1,17 +1,10 @@
-﻿uses Robotics, TCPServer;
+﻿uses Robotics;
 
 begin  
-  var server := new ServerObj('your IP address', 8888);
-  var robot := new Robot('robot1');
+  var robot1 := new Robot('bot_1');
   
-  // This is just an example
-  //
-  // server.Send(robot.MoveForward());
-  // server.Send(robot.MoveBack());
-  // server.Send(robot.TurnLeft());
-  // server.Send(robot.TurnRigth());
-  
-  // Place your code below
-  
-  server.Start();
+  robot1.DiffeDrive.SetAngularSpeed(10.1);
+  var prop := robot1.DiffeDrive.AngularSpeed;
+  Console.WriteLine($'Угловая скорость: {prop}');
+  robot1.DoCommand();
 end.

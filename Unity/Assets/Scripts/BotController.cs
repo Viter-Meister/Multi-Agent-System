@@ -43,7 +43,12 @@ namespace RosSharp.Control
             SetParameters(wheelA11);
             SetParameters(wheelA22);
             ros = ROSConnection.GetOrCreateInstance();
-            ros.Subscribe<TwistMsg>("/cmd_vel", ReceiveROSCmd);
+            if (this.gameObject.tag == "bot_1")
+                ros.Subscribe<TwistMsg>("/cmd_vel1", ReceiveROSCmd);
+            if (this.gameObject.tag == "bot_2")
+                ros.Subscribe<TwistMsg>("/cmd_vel2", ReceiveROSCmd);
+            if (this.gameObject.tag == "bot_3")
+                ros.Subscribe<TwistMsg>("/cmd_vel3", ReceiveROSCmd);
         }
 
         void ReceiveROSCmd(TwistMsg cmdVel)

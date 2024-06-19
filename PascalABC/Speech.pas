@@ -15,27 +15,23 @@ procedure speechEngine_SpeechRecognized(sender: object; e: SpeechRecognizedEvent
 begin
   if (e.Result.Text = 'вперед') then
   begin
-    server.Send(robot.MoveForward());
+    robot.MoveForward();
     Console.WriteLine('вперед!');
-    server.Start();
   end;
   if (e.Result.Text = 'назад') then
   begin
-    server.Send(robot.MoveBack());
+    robot.MoveBack();
     Console.WriteLine('назад!');
-    server.Start();
   end;
   if (e.Result.Text = 'влево') then
   begin
-    server.Send(robot.TurnLeft());
+    robot.TurnLeft();
     Console.WriteLine('влево!');
-    server.Start();
   end;
   if (e.Result.Text = 'вправо') then
   begin
-    server.Send(robot.TurnRight());
+    robot.TurnRight();
     Console.WriteLine('вправо!');
-    server.Start();
   end;
   if (e.Result.Text = 'конец') then
   begin

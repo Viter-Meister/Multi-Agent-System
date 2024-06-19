@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - robot
+  - Coin
+  - bot_1
+  - bot_2
+  - bot_3
   layers:
   - Default
   - TransparentFX

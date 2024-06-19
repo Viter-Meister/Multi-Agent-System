@@ -1,4 +1,4 @@
-#include "rclcpp/rclcpp.hpp"
+﻿#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include <chrono>
@@ -66,7 +66,8 @@ private:
         	auto end_time = std::chrono::high_resolution_clock::now();
         	std::chrono::duration<double> elapsed_time = end_time - start_time_;
         	distance_traveled = 0.1 * elapsed_time.count();
-        	RCLCPP_INFO(this->get_logger(), "distance_traveled %f", distance_traveled);
+        	RCLCPP_INFO(this->get_logger(), "distance_traveled %f", 
+        	  distance_traveled);
         }  
         stopMoving();
     }

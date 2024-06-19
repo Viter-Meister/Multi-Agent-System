@@ -19,31 +19,25 @@ type
       localAddr := IPAddress.Parse(ip);
       ipLocalEndPoint := new IPEndPoint(localAddr, port);
       listener := new TcpListener(ipLocalEndPoint);
-      Console.WriteLine($'Создан сервер: {listener.LocalEndpoint}');
     end;
     
-    async function Start(): Task;
-    procedure Send(message: string);
+    async function SendCommand(): Task;
+    async function GetFeedback(): Task<string>;
+    procedure AddCommand(message: string);
     procedure Disconnect();
   end;
 
 implementation
 
-async function ServerObj.Start(): Task;
+async function ServerObj.SendCommand(): Task;
 begin
   try
-    // запускаем сервер
     listener.Start();
-    Console.WriteLine('Сервер запущен. Ожидание подключения...');
     
-    // получаем входящее подключение
     var tcpClient := await listener.AcceptTcpClientAsync();
     client := tcpClient.Result;
-    // получаем объект NetworkStream для взаимодействия с клиентом
     var stream := client.GetStream();
-    // получаем адрес клиента
-    Console.WriteLine($'Входящее подключение: {client.Client.RemoteEndPoint}');
-    
+
     while true do
     begin
       if queries.Count() = 0 then
@@ -53,20 +47,49 @@ begin
       end
       else
       begin
-        // определяем данные для отправки
         var data := Encoding.UTF8.GetBytes(queries.Dequeue());
-        // отправляем данные
         var wr := await stream.WriteAsync(data, 0, data.Length);
-        Console.WriteLine($'Клиенту {client.Client.RemoteEndPoint} отправлены данные');
+        Console.WriteLine($'Клиенту {client.Client.RemoteEndPoint}' + 
+          ' отправлены данные');
       end;
     end;
   finally
-    Console.WriteLine($'Подключение прервано.');
     Disconnect();
   end;
 end;
 
-procedure ServerObj.Send(message: string);
+async function ServerObj.GetFeedback(): Task<string>;
+begin
+  try
+    // запускаем сервер
+    listener.Start();
+    
+    // получаем входящее подключение
+    var tcpClient := await listener.AcceptTcpClientAsync();
+    client := tcpClient.Result;
+    // получаем объект NetworkStream для взаимодействия с клиентом
+    var stream := client.GetStream();
+
+    var data := new byte[512];
+    while true do
+    begin
+      // получаем данные из потока
+      var bytes := await stream.ReadAsync(data, 0, 512);
+      var message := Encoding.UTF8.GetString(data);
+      if bytes.Result > 0 then
+      begin
+        Console.WriteLine($'Получено сообщение: {message}'); 
+        Result := Task.FromResult(message);
+        Disconnect();
+        break;
+      end;
+    end;
+  finally
+    Disconnect();
+  end;
+end;
+
+procedure ServerObj.AddCommand(message: string);
 begin
   queries.Enqueue(message);
 end;
